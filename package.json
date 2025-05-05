@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint starfall",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "pnpm prettier --write ./src",
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -23,6 +25,9 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^6.3.1"
@@ -31,7 +36,8 @@
     "extends": "./node_modules/@ambright_dev/config/build/eslint.cjs"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,md}": "prettier --check",
-    "*.{ts,tsx}": "eslint"
+    "src/**/*.{ts,tsx}": [
+      "pnpm format"
+    ]
   }
 }
