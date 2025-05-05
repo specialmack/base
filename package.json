@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint starfall",
+    "lint": "eslint ./src",
     "preview": "vite preview",
     "format": "pnpm prettier --write ./src",
     "prepare": "husky"
@@ -16,7 +16,6 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@ambright_dev/config": "1.0.12",
     "@eslint/js": "^9.22.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -32,12 +31,10 @@
     "typescript-eslint": "^8.26.1",
     "vite": "^6.3.1"
   },
-  "eslintConfig": {
-    "extends": "./node_modules/@ambright_dev/config/build/eslint.cjs"
-  },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "pnpm format"
+      "pnpm format",
+      "pnpm lint"
     ]
   }
 }
