@@ -1,5 +1,5 @@
 {
-  "name": "base-backend",
+  "name": "@base/backend",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -7,6 +7,7 @@
     "build": "tsc"
   },
   "dependencies": {
+    "@base/common": "workspace:*",
     "express": "^5.1.0",
     "cors": "^2.8.5"
   },

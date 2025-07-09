@@ -1,3 +1,5 @@
+import { sampleLogging } from "@base/common";
+
 const baseUrl = `http://localhost:3088`;
 
 class Api {
@@ -5,6 +7,7 @@ class Api {
 
   async pingBackend(): Promise<string> {
     console.log("PING");
+    sampleLogging();
 
     const requestUrl = `${baseUrl}/ping`;
 

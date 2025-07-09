@@ -1,3 +1,4 @@
+import { sampleLogging } from "@base/common";
 import express from "express";
 import cors from "cors";
 
@@ -9,6 +10,7 @@ app.use(express.json());
 
 app.get("/ping", (_req, res) => {
   console.log("PINGED");
+  sampleLogging();
   res.status(200);
 });
 
