@@ -4,14 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "pnpm dev:frontend",
+    "dev": "pnpm dev:frontend && pnpm dev:backend",
     "dev:frontend": "pnpm --dir frontend dev",
-    "build": "pnpm build:frontend",
+    "dev:backend": "pnpm --dir backend dev",
+    "build": "pnpm build:frontend && pnpm build:backend",
     "build:frontend": "pnpm --dir frontend build",
+    "build:backend": "pnpm --dir backend build",
     "lint": "pnpm lint:frontend",
     "lint:frontend": "eslint frontend/src",
-    "format": "pnpm format:frontend",
+    "lint:backend": "eslint backend/src",
+    "format": "pnpm format:frontend && pnpm format:backend",
     "format:frontend": "pnpm prettier --write frontend/src",
+    "format:backend": "pnpm prettier --write backend/src",
     "prepare": "husky"
   },
   "devDependencies": {
