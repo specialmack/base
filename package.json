@@ -11,6 +11,7 @@
     "build:common": "pnpm --dir common build",
     "build:frontend": "pnpm --dir frontend build",
     "build:backend": "pnpm --dir backend build",
+    "test": "vitest run",
     "lint": "pnpm lint:frontend",
     "lint:common": "eslint frontend/src",
     "lint:frontend": "eslint frontend/src",
@@ -36,7 +37,8 @@
     "typescript-eslint": "^8.36.0",
     "prettier": "^3.6.2",
     "npm-run-all": "^4.1.5",
-    "npm-check-updates": "^18.0.1"
+    "npm-check-updates": "^18.0.1",
+    "vitest": "^3.2.4"
   },
   "lint-staged": {
     "./**/*.{ts,tsx}": [
