@@ -12,9 +12,11 @@
     "build:frontend": "pnpm --dir frontend build",
     "build:backend": "pnpm --dir backend build",
     "lint": "pnpm lint:frontend",
+    "lint:common": "eslint frontend/src",
     "lint:frontend": "eslint frontend/src",
     "lint:backend": "eslint backend/src",
     "format": "pnpm format:frontend && pnpm format:backend",
+    "format:common": "pnpm prettier --write common/src",
     "format:frontend": "pnpm prettier --write frontend/src",
     "format:backend": "pnpm prettier --write backend/src",
     "prepare": "husky"
