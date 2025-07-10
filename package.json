@@ -24,6 +24,11 @@
     "update:common": "pnpm npm-check-updates -u --cwd common",
     "update:frontend": "pnpm npm-check-updates -u --cwd frontend --reject vite",
     "update:backend": "pnpm npm-check-updates -u --cwd backend --reject node",
+    "clean": "pnpm clean:common & pnpm clean:frontend & pnpm:clean backend & pnpm clean:root",
+    "clean:root": "pnpm rimraf node_modules & pnpm rimraf build",
+    "clean:common": "pnpm rimraf common/node_modules & pnpm rimraf common/build",
+    "clean:frontend": "pnpm rimraf frontend/node_modules & pnpm rimraf frontend/build",
+    "clean:backend": "pnpm rimraf backend/node_modules & pnpm rimraf backend/build",
     "prepare": "husky"
   },
   "devDependencies": {
@@ -34,10 +39,12 @@
     "globals": "^16.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
-    "typescript-eslint": "^8.36.0",
-    "prettier": "^3.6.2",
-    "npm-run-all": "^4.1.5",
     "npm-check-updates": "^18.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.36.0",
     "vitest": "^3.2.4"
   },
   "lint-staged": {

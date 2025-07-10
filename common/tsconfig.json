@@ -2,6 +2,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "module": "NodeNext",
+    "outDir": "./build",
+    "declaration": true
   },
   "include": [
     "src/**/*.ts"
