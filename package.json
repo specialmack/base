@@ -19,19 +19,24 @@
     "format:common": "pnpm prettier --write common/src",
     "format:frontend": "pnpm prettier --write frontend/src",
     "format:backend": "pnpm prettier --write backend/src",
+    "update-packages": "pnpm update:common && pnpm update:frontend && pnpm update:backend",
+    "update:common": "pnpm npm-check-updates -u --cwd common",
+    "update:frontend": "pnpm npm-check-updates -u --cwd frontend --reject vite",
+    "update:backend": "pnpm npm-check-updates -u --cwd backend --reject node",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@eslint/js": "^9.26.0",
-    "eslint": "^9.26.0",
+    "@eslint/js": "^9.30.1",
+    "eslint": "^9.30.1",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.0.0",
+    "globals": "^16.3.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.1",
-    "typescript-eslint": "^8.31.1",
-    "prettier": "^3.5.3",
-    "npm-run-all": "^4.1.5"
+    "lint-staged": "^16.1.2",
+    "typescript-eslint": "^8.36.0",
+    "prettier": "^3.6.2",
+    "npm-run-all": "^4.1.5",
+    "npm-check-updates": "^18.0.1"
   },
   "lint-staged": {
     "./**/*.{ts,tsx}": [
