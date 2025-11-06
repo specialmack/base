@@ -1,2 +1,2 @@
 # base
-template or webprojects
+template for web-projects
